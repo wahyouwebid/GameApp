@@ -79,8 +79,12 @@ class DetailActivity : AppCompatActivity() {
         request.setTitle("Game Mobil Gerak")
         request.setDescription("Downloading")
         request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, nameFile)
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-        fileLocation = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString() + nameFile
+        request.setNotificationVisibility(
+                DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED
+        )
+        fileLocation = Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_DOWNLOADS
+        ).toString() + nameFile
 
         downloadReference = downloadManager.enqueue(request)
         val downloadQuery = DownloadManager.Query()
