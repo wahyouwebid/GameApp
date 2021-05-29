@@ -22,8 +22,8 @@ class LoginActivity : AppCompatActivity() {
             btnLogin.setOnClickListener {
                 startActivity(Intent(this@LoginActivity, MainActivity::class.java))
             }
-
-//            btnGame.setOnClickListener {
+//
+//            btnLogin.setOnClickListener {
 //                startActivity(Intent(this@LoginActivity, GameActivity::class.java))
 //            }
         }

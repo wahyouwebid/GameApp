@@ -13,7 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -23,24 +23,30 @@
                 android:layout_height="@dimen/spacing_xlarge"
                 android:layout_centerVertical="true"
                 android:padding="@dimen/spacing_medium"
-                android:background="@drawable/bg_circle_primary"
                 android:src="@drawable/ic_back_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/bg_circle_primary"
                 app:tint="@color/white" />
 
             <TextView
                 android:id="@+id/tvTitleToolbar"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/title_detail"
-                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:layout_marginStart="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:text="@string/title_detail"
                 android:textSize="@dimen/font_18"
-                android:layout_toEndOf="@+id/imgBack"
-                android:layout_centerVertical="true"/>
-        </RelativeLayout>
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgBack"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.MaterialToolbar>
 
     <com.github.barteksc.pdfviewer.PDFView

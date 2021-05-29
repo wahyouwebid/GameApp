@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             1,
             "Game Dummy",
             "https://test.pdf",
-            "https://game.html",
+            "https://drive.google.com/file/d/1wWQ_ki-aBEYxWSxGJgZvgITbPW2Yun0x/view?usp=sharing",
             "https://www.kibrispdr.org/data/pc-game-cover-19.jpg"
         )
         for (i in 1..4) {
