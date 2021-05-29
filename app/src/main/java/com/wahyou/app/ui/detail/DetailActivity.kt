@@ -32,7 +32,7 @@ class DetailActivity : AppCompatActivity() {
 
     private fun setupLoadPdf(){
         with(binding){
-            pdfView.fromAsset("sample.pdf")
+            pdfView.fromAsset("GameBalapMobilOnline.pdf")
                 .swipeHorizontal(false)
                 .enableAnnotationRendering(true)
                 .linkHandler(DefaultLinkHandler(pdfView))

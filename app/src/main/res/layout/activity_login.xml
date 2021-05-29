@@ -102,6 +102,18 @@
             android:textColor="@color/white"
             app:layout_constraintTop_toBottomOf="@id/tvForgotPassword"/>
 
+<!--        <Button-->
+<!--            android:id="@+id/btnGame"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:text="Game"-->
+<!--            android:layout_marginTop="@dimen/spacing_xlarge"-->
+<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+<!--            android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
+<!--            android:background="@drawable/bg_button_rounded"-->
+<!--            android:textColor="@color/white"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/btnLogin"/>-->
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

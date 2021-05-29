@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import com.wahyou.app.databinding.ActivityLoginBinding
+import com.wahyou.app.ui.game.GameActivity
 import com.wahyou.app.ui.main.MainActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -21,6 +22,10 @@ class LoginActivity : AppCompatActivity() {
             btnLogin.setOnClickListener {
                 startActivity(Intent(this@LoginActivity, MainActivity::class.java))
             }
+
+//            btnGame.setOnClickListener {
+//                startActivity(Intent(this@LoginActivity, GameActivity::class.java))
+//            }
         }
     }
 
