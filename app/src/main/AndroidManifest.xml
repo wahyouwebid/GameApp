@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wahyou.app">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,27 +12,56 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
         <activity
-            android:name=".ui.game.GameActivity"
+            android:name=".ui.video.VideoActivity"
             android:label="@string/title_activity_game"
             android:theme="@style/Theme.App.NoActionBar">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Accepts URIs that begin with "https://dika.web.id/mobilgerak” -->
-                <data android:scheme="https"
-                    android:host="dika.web.id"
-                    android:pathPrefix="/mobilgerak" />
-                <data android:scheme="app" android:host="open.my.game" />
-                <!-- note that the leading "/" is required for pathPrefix-->
+                <!-- Accepts URIs that begin with "https://youtube.com/watch” -->
+                <data
+                    android:host="youtube.com"
+                    android:pathPrefix="/watch"
+                    android:scheme="https" />
             </intent-filter>
-            <intent-filter android:label="@string/app_name">
+            <intent-filter android:label="App Dika">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Accepts URIs that begin with "dika://mobilgerak” -->
-                <data android:scheme="dika"
-                    android:host="mobilgerak" />
+                <!-- Accepts URIs that begin with "appgame://video” -->
+                <data android:scheme="appgame"
+                    android:host="video" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.game.GameActivity"
+            android:label="@string/title_activity_game"
+            android:theme="@style/Theme.App.NoActionBar">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "https://dika.web.id/mobilgerak” -->
+                <data
+                    android:host="dika.web.id"
+                    android:pathPrefix="/mobilgerak"
+                    android:scheme="https" />
+                <data
+                    android:host="open.my.game"
+                    android:scheme="app" />
+                <!-- note that the leading "/" is required for pathPrefix -->
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "mobilgerak://dika” -->
+                <data
+                    android:host="mobilgerak"
+                    android:scheme="dika" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.detail.DetailActivity" />
@@ -50,7 +81,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
