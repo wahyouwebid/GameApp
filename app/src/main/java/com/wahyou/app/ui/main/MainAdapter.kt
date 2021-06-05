@@ -27,7 +27,7 @@ class MainAdapter (
         with(holder.view) {
             val item = data[position]
 
-            Picasso.get().load(R.drawable.game).into(imgThumbnail)
+            Picasso.get().load(R.drawable.thumbnail).into(imgThumbnail)
 
             root.setOnClickListener {
                 showDetail(item)
